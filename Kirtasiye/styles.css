@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --main-color: rgb(213, 39, 39);
+    --black-color: #000000;
+    --border: 0.1rem solid rgba(255,255,255,0.4);
+}
+
+*{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s ease;  
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+/*Header start*/
+.header .search-form{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: white;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 25px 2px rgb(0 0 0 / 75%);
+    transform: scaleY(0);
+}
+.header .search-form.active{
+    transform: scaleY(1);
+}
+.header .search-form i{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: var(--black-color);
+}
+.header .search-form input{
+    width: 100%;
+}
+.header .logo img{
+    height: 10rem;
+}
+.header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 2rem 7%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+body{
+    background-color: var(--main-color);
+}
+section{
+    padding: 3.5rem 7%;
+}
+a{
+    color:var(--black-color);
+    text-decoration: none;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 2.0rem;
+    color: white;
+    background-color: #000000;
+}
+
+.heading{
+    color: white;
+    text-transform: capitalize;   
+    font-size: 4rem;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.1rem solid white;
+}
+/*Header start*/
+.header .navbar a{
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--black-color);
+    border-bottom: 0.1rem solid transparent;
+}
+    
+
+
+.header .navbar .active, .header .navbar a:hover{
+    border-color: var(--main-color);
+    padding-bottom: 0.5rem;
+}
+.header .buttons button{
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    background-color: transparent;
+}
+.header .cart-items-container{
+    position: absolute;
+    top: 95%;
+    height: calc(100vh - 9rem);
+    width: 35rem;
+    background-color: white;
+    box-shadow: 0px 0px 17px -2px rgba(0 0 0 / 75%);
+    right: -100%;
+}
+.header .cart-items-container.active{
+    right: 3rem;
+}
+
+.header .cart-items-container .cart-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+.header .cart-items-container .cart-item:hover{
+    box-shadow: 0px 0px 17px -2px rgba(0,0,0, 0.75);
+} 
+.header .cart-items-container .cart-item .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--black-color);
+}
+.header .cart-items-container .cart-item img{
+    height: 7rem;
+}
+.header .cart-items-container .cart-item .content h3{
+    font-size: 2rem;
+    color: var(--black-color);
+    padding-bottom: 0.5rem;
+}
+.header .cart-items-container .cart-item .content .price{
+    font-size: 1.5rem;
+    color:  var(--black-color);
+}
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+}
+.header menu-btn{
+    display: none;
+}
+/*Header End*/
+
+/*Home Start*/
+.home{
+    min-height: 100vh;
+    background: url(./images/home.jpg)
+    no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -14.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+.home .content h3{
+    font-size: 6rem;
+    color: red;
+}
+.home .content p{
+    font-size: 2rem;
+    font-weight: 300;
+    font-weight: bold;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: red;   
+}
+/*Home End*/
+
+/*Kırtasiye Start*/
+.kirtasiye .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+}
+.kirtasiye .box-container .box{
+    padding: 3rem;
+    background-color: white;
+    border-radius: 3rem;
+    background-color: white;
+    min-height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.kirtasiye .box-container .box img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.kirtasiye .box-container .box .kirtasiye-category{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.kirtasiye .box-container .box h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.kirtasiye .box-container .box .price{
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.kirtasiye .box-container .box .price span{
+    font-size: 2rem;
+    text-decoration: line-through;
+    font-weight: 300;
+}
+/*Kırtasiye End*/
+
+/*Kagit Urunleri Start*/
+.kagiturunleri .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap:1.5rem;
+}
+
+.kagiturunleri .box-container .box{
+    text-align: center;
+    background-color: white;
+    position: relative;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.kagiturunleri .box-container .box .box-head{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+.kagiturunleri .box-container .box .box-head .title{
+    font-size: 1.7rem;
+}
+.kagiturunleri .box-container .box .box-head .name{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+.kagiturunleri .box-container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+    border-radius: 3rem;
+}
+.kagiturunleri .box-container .box .price{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+/*Kagit Urunleri End*/
+
+/*Hobi ve Sanat Start*/
+.hobivesanat .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap:1.5rem;
+}
+
+.hobivesanat .box-container .box{
+    text-align: center;
+    background-color: white;
+    position: relative;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.hobivesanat .box-container .box .box-head{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+.hobivesanat .box-container .box .box-head .title{
+    font-size: 1.7rem;
+}
+.hobivesanat .box-container .box .box-head .name{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+.hobivesanat .box-container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+    border-radius: 3rem;
+}
+.hobivesanat .box-container .box .price{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+/*Hobi ve Sanat End*/
+/*Okul Start*/
+.okul .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap:1.5rem;
+}
+
+.okul .box-container .box{
+    text-align: center;
+    background-color: white;
+    position: relative;
+    border-radius: 3rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.okul .box-container .box .box-head{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+}
+.okul .box-container .box .box-head .title{
+    font-size: 1.7rem;
+}
+.okul .box-container .box .box-head .name{
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: start;
+    overflow-wrap: anywhere;
+}
+.okul .box-container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    object-fit: cover;
+    transform: translate(-50%,-50%);
+    border-radius: 3rem;
+}
+.okul .box-container .box .price{
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+/*Okul End*/
+
+/*İletişim Start*/
+.iletisim .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.iletisim .row .map{
+    flex: 1 1 60rem;
+    width: 100%;
+    object-fit: cover;
+}
+.iletisim .row .bilgiler{
+    flex: 1 1 45rem;
+    width: 100%;
+    text-align: center;
+}
+.iletisim .row .bilgiler h2{
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+.credit {
+    font-size: 1.7rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: 250;
+    padding-top: 1rem;
+}
+/*İletişim End*/
+.logo img{
+    height: 7rem;
+}
