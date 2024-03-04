@@ -170,7 +170,7 @@ a{
 
 /*Home Start*/
 .home{
-    min-height: 100vh;
+    min-height: 105vh;
     background: url(./images/home.jpg)
     no-repeat;
     background-size: cover;
